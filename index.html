@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BCB Logging</title>
     <style>
-        .logo {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    height: 100px;
+        ..logo {
+    height: 100px; /* adjust size */
     width: auto;
 }
+
 header {
+    background-color: #ff6600;
+    color: white;
+    padding: 0 20px; /* horizontal only */
+    height: 100px; /* fixed height */
+    font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* aligns logo + text vertically */
     position: relative;
+}
+
 }
         body {
             font-family: Arial, sans-serif;
@@ -22,12 +30,7 @@ header {
             background-color: #fff;
             color: #333;
         }
-        header {
-            background-color: #ff6600;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
+    
         }
         .hero {
             background: url('https://i.imgur.com/VbPy8Cw.png') no-repeat center center/cover;
