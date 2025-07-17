@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BCB Logging</title>
     <style>
-        ..logo {
-    height: 100px; /* adjust size */
-    width: auto;
-}
+        .logo {
+            height: 100px;
+            width: auto;
+        }
 
-header {
-    background-color: #ff6600;
-    color: white;
-    padding: 0 20px; /* horizontal only */
-    height: 100px; /* fixed height */
-    font-size: 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* aligns logo + text vertically */
-    position: relative;
-}
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 0 20px;
+            height: 100px;
+            font-size: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
 
-}
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -30,8 +29,7 @@ header {
             background-color: #fff;
             color: #333;
         }
-    
-        }
+
         .hero {
             background: url('https://i.imgur.com/VbPy8Cw.png') no-repeat center center/cover;
             height: 600px;
@@ -42,19 +40,23 @@ header {
             font-size: 32px;
             font-weight: bold;
             position: relative;
+            text-align: center;
         }
+
         .container {
             padding: 20px;
             text-align: center;
             position: relative;
             background: rgba(255, 255, 255, 0.8);
         }
+
         .contact {
             background-color: #ff6600;
             color: white;
             padding: 20px;
             text-align: center;
         }
+
         input, textarea, button {
             display: block;
             width: 80%;
@@ -62,12 +64,14 @@ header {
             padding: 10px;
             font-size: 16px;
         }
+
         button {
             background-color: white;
             color: #ff6600;
             border: none;
             cursor: pointer;
         }
+
         button:hover {
             background-color: #ddd;
         }
@@ -75,47 +79,40 @@ header {
 </head>
 <body>
     <header>
-        BCB Logging
-    <img src="https://hshc201.github.io/new-logo/Photoroom_20250618_115410.PNG" alt="BCB Logo" class="logo">
-</header>
-
+        <div>BCB Logging</div>
+        <img src="https://hshc201.github.io/new-logo/Photoroom_20250618_115410.PNG" alt="BCB Logo" class="logo">
     </header>
+
     <div class="hero">
         Quality Timber Solutions
     </div>
 
-   <div class="container">
-    <h2>About Us</h2>
-    <p>Founded by George Beattie, Hector Copcutt, and George Bell, BCB Logging delivers high-quality, reliable tree services and firewood solutions across Gloucestershire, Wiltshire, Hampshire and Northumberland. </p>
-    <p>We specialise in:</p>
-    <p>-Tree felling and wood clearance</p>
-    <p>-Seasoned hardwood and softwood log sales</p>
-    <p>-Delivery and stacking straight to your home, ready to burn</p>
-    <p>At BCB Logging, health and safety are our top priorities. All our chainsaw operators are fully certified with a Level 2 Chainsaw Competence Certificate, ensuring that every job is completed safely, professionally, and to a high standard.</p>
-    <p>We bring our own professional equipment – including chainsaws, log processors, and trailers, allowing us to work independently and efficiently on any site.</p>
-    <p>If you're interested in any of our services, please fill out the form below detailing your needs and contact information. We look forward to hearing from you.</p>
-</div>
-    <h2>Contact Us</h2>
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Founded by George Beattie, Hector Copcutt, and George Bell, BCB Logging delivers high-quality, reliable tree services and firewood solutions across Gloucestershire, Wiltshire, Hampshire and Northumberland.</p>
+        <p>We specialise in:</p>
+        <p>- Tree felling and wood clearance</p>
+        <p>- Seasoned hardwood and softwood log sales</p>
+        <p>- Delivery and stacking straight to your home, ready to burn</p>
+        <p>At BCB Logging, health and safety are our top priorities. All our chainsaw operators are fully certified with a Level 2 Chainsaw Competence Certificate, ensuring that every job is completed safely, professionally, and to a high standard.</p>
+        <p>We bring our own professional equipment – including chainsaws, log processors, and trailers, allowing us to work independently and efficiently on any site.</p>
+        <p>If you're interested in any of our services, please fill out the form below detailing your needs and contact information. We look forward to hearing from you.</p>
+    </div>
 
-    
+    <h2 style="text-align: center;">Contact Us</h2>
+
     <div class="contact">
-        
-        <form
-  action="https://formspree.io/f/mldjeprk"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
-        
+        <form action="https://formspree.io/f/mldjeprk" method="POST">
+            <label>
+                Your email:
+                <input type="email" name="email">
+            </label>
+            <label>
+                Your message:
+                <textarea name="message"></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
         <p>Phone: +44 7957 517107</p>
         <p>Email: bcb.logging2025@gmail.com</p>
     </div>
