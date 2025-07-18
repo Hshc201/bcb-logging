@@ -41,6 +41,27 @@
             font-weight: bold;
             position: relative;
             text-align: center;
+            
+            <div class="tab-container">
+  <div class="tab-buttons">
+    <button class="tab-button active" onclick="openTab('about')">About</button>
+    <button class="tab-button" onclick="openTab('services')">Services</button>
+    <button class="tab-button" onclick="openTab('contact')">Contact</button>
+  </div>
+
+  <div id="about" class="tab-content active">
+    <p>This is the About section content.</p>
+  </div>
+
+  <div id="services" class="tab-content">
+    <p>This is the Services section content.</p>
+  </div>
+
+  <div id="contact" class="tab-content">
+    <p>This is the Contact section content.</p>
+  </div>
+</div>
+
         }
 
         .container {
@@ -96,6 +117,51 @@ button:active {
     transform: translateY(1px);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+  .tab-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff7b00;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #e56e00;
+}
+
+.tab-button.active {
+  background-color: #333;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #fffaf2;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.tab-content.active {
+  display: block;
+}
+
 
         }
     </style>
@@ -108,8 +174,10 @@ button:active {
 
     <div class="hero">
         Quality Timber Solutions
-    </div>
 
+    </div>
+    
+  
     <div class="container">
         <h2>About Us</h2>
         <p>BCB Logging delivers high-quality, reliable tree services and firewood solutions across Gloucestershire, Wiltshire, Hampshire and Northumberland.</p>
@@ -142,5 +210,23 @@ button:active {
         <p>Phone: +44 7957 517107</p>
         <p>Email: bcb.logging2025@gmail.com</p>
     </div>
+    <script>
+  function openTab(tabId) {
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+
+    // Remove 'active' class from all buttons
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    // Show the selected tab and highlight the button
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+</script>
+
 </body>
 </html>
