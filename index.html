@@ -142,6 +142,23 @@
     .tab-content.active {
       display: block;
     }
+    .firewood-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.firewood-column {
+  flex: 1 1 250px;
+  background-color: #fffaf2;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: 300px;
+}
+
   </style>
 </head>
 <body>
@@ -158,7 +175,7 @@
   <div class="tab-container">
     <div class="tab-buttons">
       <button class="tab-button active" onclick="openTab(event, 'about')">About</button>
-      <button class="tab-button" onclick="openTab(event, 'Prices')">Prices</button>
+      <button class="tab-button" onclick="openTab(event, 'Firewood')">Firewood</button>
       <button class="tab-button" onclick="openTab(event, 'contact')">Contact</button>
     </div>
 
@@ -171,7 +188,7 @@
       </ul>
     </div>
 
-    <div id="Prices" class="tab-content">
+    <div id="Firewood" class="tab-content">
     <h3>Firewood Pricing <small>(Mixed hardwood – Oak, Ash, Cherry)</small></h3>
 
   <div class="firewood-grid">
