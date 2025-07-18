@@ -72,15 +72,31 @@
             font-size: 16px;
         }
 
-        button {
-            background-color: white;
-            color: #ff6600;
-            border: none;
-            cursor: pointer;
-        }
+       button {
+    background-color: white;
+    color: #ff7b00; /* match your logo's orange */
+    border: 2px solid #ff7b00;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 
-        button:hover {
-            background-color: #ddd;
+button:hover {
+    background-color: #ff7b00;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
         }
     </style>
 </head>
