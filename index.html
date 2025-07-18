@@ -1,230 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCB Logging</title>
-    <style>
-        .logo {
-            height: 160px;
-            width: auto;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BCB Logging</title>
+  <style>
+    .logo {
+      height: 160px;
+      width: auto;
+    }
 
-        header {
-            background-color: #90EE90;
-            color: black;
-            padding: 0 20px;
-            height: 140px;
-            font-size: 32px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-        }
+    header {
+      background-color: #90EE90;
+      color: black;
+      padding: 0 20px;
+      height: 140px;
+      font-size: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: ##fffaf2;
-            color: #333;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffaf2;
+      color: #333;
+    }
 
-        .hero {
-            background: url('https://i.imgur.com/VbPy8Cw.png') no-repeat center center/cover;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 32px;
-            font-weight: bold;
-            position: relative;
-            text-align: center;
-            
-            <div class="tab-container">
-  <div class="tab-buttons">
-    <button class="tab-button active" onclick="openTab('about')">About</button>
-    <button class="tab-button" onclick="openTab('services')">Services</button>
-    <button class="tab-button" onclick="openTab('contact')">Contact</button>
-  </div>
+    .hero {
+      background: url('https://i.imgur.com/VbPy8Cw.png') no-repeat center center/cover;
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      position: relative;
+      text-align: center;
+    }
 
-  <div id="about" class="tab-content active">
-    <p>This is the About section content.</p>
-  </div>
+    .container {
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      background: #ff7b00;
+      color: white;
+    }
 
-  <div id="services" class="tab-content">
-    <p>This is the Services section content.</p>
-  </div>
+    .contact {
+      background-color: #90EE90;
+      color: black;
+      padding: 20px;
+      text-align: center;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 600px;
+      margin: 40px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
 
-  <div id="contact" class="tab-content">
-    <p>This is the Contact section content.</p>
-  </div>
-</div>
+    input,
+    textarea,
+    button {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 16px;
+    }
 
-        }
+    button {
+      background-color: white;
+      color: #ff7b00;
+      border: 2px solid #ff7b00;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-        .container {
-            padding: 20px;
-            text-align: center;
-            position: relative;
-            background: #ff7b00
-            color: white; /* ← this makes the text white */
-;
-        }
+    button:hover {
+      background-color: #ff7b00;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
 
-        .contact {
-            background-color: #90EE90;
-            color: black;
-            padding: 20px;
-            text-align: center;
-            border-radius: 20px;          /* ← adjust px for more/less curve   */
-            width: 90%;                   /* keep it responsive                */
-            max-width: 600px;             /* optional: cap width on big screens*/
-            margin: 40px auto;            /* center it & add breathing space   */
-            box-shadow: 0 4px 10px rgba(0,0,0,.15); /* soft drop shadow (optional) */
-        }
+    button:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-        input, textarea, button {
-            display: block;
-            width: 80%;
-            margin: 10px auto;
-            padding: 10px;
-            font-size: 16px;
-        }
+    .tab-container {
+      width: 90%;
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+    }
 
-       button {
-    background-color: white;
-    color: #ff7b00; /* match your logo's orange */
-    border: 2px solid #ff7b00;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
 
-button:hover {
-    background-color: #ff7b00;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-}
+    .tab-button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff7b00;
+      color: white;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
 
-button:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-  .tab-container {
-  width: 90%;
-  max-width: 800px;
-  margin: 40px auto;
-  text-align: center;
-}
+    .tab-button:hover {
+      background-color: #e56e00;
+    }
 
-.tab-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
+    .tab-button.active {
+      background-color: #333;
+    }
 
-.tab-button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #ff7b00;
-  color: white;
-  cursor: pointer;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background-color: #fffaf2;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
 
-.tab-button:hover {
-  background-color: #e56e00;
-}
-
-.tab-button.active {
-  background-color: #333;
-}
-
-.tab-content {
-  display: none;
-  padding: 20px;
-  background-color: #fffaf2;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.tab-content.active {
-  display: block;
-}
-
-
-        }
-    </style>
+    .tab-content.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div>BCB Logging</div>
-        <img src="https://hshc201.github.io/new-logo/Photoroom_20250618_115410.PNG" alt="BCB Logo" class="logo">
-    </header>
+  <header>
+    <div>BCB Logging</div>
+    <img src="https://hshc201.github.io/new-logo/Photoroom_20250618_115410.PNG" alt="BCB Logo" class="logo">
+  </header>
 
-    <div class="hero">
-        Quality Timber Solutions
+  <div class="hero">
+    Quality Timber Solutions
+  </div>
 
+  <!-- ✅ Tabs Start Here -->
+  <div class="tab-container">
+    <div class="tab-buttons">
+      <button class="tab-button active" onclick="openTab(event, 'about')">About</button>
+      <button class="tab-button" onclick="openTab(event, 'services')">Services</button>
+      <button class="tab-button" onclick="openTab(event, 'contact')">Contact</button>
     </div>
-    
-  
-    <div class="container">
-        <h2>About Us</h2>
-        <p>BCB Logging delivers high-quality, reliable tree services and firewood solutions across Gloucestershire, Wiltshire, Hampshire and Northumberland.</p>
-       <p><strong>We specialise in:</strong></p>
-    
-    <ul style="list-style: none; padding: 0; font-weight: bold;">
+
+    <div id="about" class="tab-content active">
+      <p>Founded by George Beattie, Hector Copcutt, and George Bell, BCB Logging delivers high-quality, reliable tree services and firewood solutions across Gloucestershire, Wiltshire, Hampshire and Northumberland.</p>
+    </div>
+
+    <div id="services" class="tab-content">
+      <ul style="list-style: none; padding: 0; font-weight: bold;">
         <li>- Tree felling and wood clearance</li>
         <li>- Seasoned hardwood and softwood log sales</li>
         <li>- Delivery and stacking straight to your home, ready to burn</li>
-    </ul>
-        <p>At BCB Logging, health and safety are our top priorities. All our chainsaw operators are fully certified with a Level 2 Chainsaw Competence Certificate, ensuring that every job is completed safely, professionally, and to a high standard.</p>
-        <p>We bring our own professional equipment – including chainsaws, log processors, and trailers, allowing us to work independently and efficiently on any site.</p>
-        <p>If you're interested in any of our services, please fill out the form below detailing your needs and contact information. We look forward to hearing from you.</p>
+      </ul>
     </div>
 
-    <h2 style="text-align: center;">Contact Us</h2>
-
-    <div class="contact">
-        <form action="https://formspree.io/f/mldjeprk" method="POST">
-            <label>
-                Your email:
-                <input type="email" name="email">
-            </label>
-            <label>
-                Your message:
-                <textarea name="message"></textarea>
-            </label>
-            <button type="submit">Send</button>
-        </form>
-        <p>Phone: +44 7957 517107</p>
-        <p>Email: bcb.logging2025@gmail.com</p>
+    <div id="contact" class="tab-content">
+      <p>Phone: +44 7957 517107</p>
+      <p>Email: bcb.logging2025@gmail.com</p>
     </div>
-    <script>
-  function openTab(tabId) {
-    // Hide all tab contents
-    document.querySelectorAll('.tab-content').forEach(tab => {
-      tab.classList.remove('active');
-    });
+  </div>
+  <!-- ✅ Tabs End Here -->
 
-    // Remove 'active' class from all buttons
-    document.querySelectorAll('.tab-button').forEach(btn => {
-      btn.classList.remove('active');
-    });
+  <!-- ✅ JS for Tabs -->
+  <script>
+    function openTab(evt, tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>
 
-    // Show the selected tab and highlight the button
-    document.getElementById(tabId).classList.add('active');
-    event.currentTarget.classList.add('active');
   }
 </script>
 
