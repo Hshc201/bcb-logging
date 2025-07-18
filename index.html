@@ -20,6 +20,8 @@
       justify-content: space-between;
       align-items: center;
       position: relative;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
     }
 
     body {
@@ -142,23 +144,23 @@
     .tab-content.active {
       display: block;
     }
+
     .firewood-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 20px;
-}
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 20px;
+    }
 
-.firewood-column {
-  flex: 1 1 250px;
-  background-color: #fffaf2;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  max-width: 300px;
-}
-
+    .firewood-column {
+      flex: 1 1 250px;
+      background-color: #fffaf2;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      max-width: 300px;
+    }
   </style>
 </head>
 <body>
@@ -176,12 +178,12 @@
     <div class="tab-buttons">
       <button class="tab-button active" onclick="openTab(event, 'about')">About</button>
       <button class="tab-button" onclick="openTab(event, 'Firewood')">Firewood</button>
-      <button class="tab-button" onclick="openTab(event, 'contact')">Contact</button>
+      <button class="tab-button" onclick="openTab(event, 'treeservices')">Tree Services</button>
     </div>
 
     <div id="about" class="tab-content active">
       <p>BCB Logging delivers high-quality, reliable tree services and firewood solutions across Gloucestershire, Wiltshire, Hampshire and Northumberland.</p>
-     <ul style="list-style: none; padding: 0; font-weight: bold;">
+      <ul style="list-style: none; padding: 0; font-weight: bold;">
         <li>- Tree felling and wood clearance</li>
         <li>- Seasoned hardwood and softwood log sales</li>
         <li>- Delivery and stacking straight to your home, ready to burn</li>
@@ -189,52 +191,59 @@
     </div>
 
     <div id="Firewood" class="tab-content">
-    <h3>Firewood Pricing <small>(Mixed hardwood – Oak, Ash, Cherry)</small></h3>
+      <h3>Firewood Pricing <small>(Mixed hardwood – Oak, Ash, Cherry)</small></h3>
 
-  <div class="firewood-grid">
-    <!-- Ton Bags -->
-    <div class="firewood-column">
-      <h4>🪵 Ton Bags</h4>
-      <ul style="list-style: none; padding: 0; font-size: 18px;">
-        <li>£75 loose (approx. 0.6m³)</li>
-        <li>£90 stacked neatly at your home</li>
-      </ul>
+      <div class="firewood-grid">
+        <div class="firewood-column">
+          <h4>🪵 Ton Bags</h4>
+          <ul style="list-style: none; padding: 0; font-size: 18px;">
+            <li>£75 loose (approx. 0.6m³)</li>
+            <li>£90 stacked neatly at your home</li>
+          </ul>
+        </div>
+
+        <div class="firewood-column">
+          <h4>🔥 Cubic Metres</h4>
+          <ul style="list-style: none; padding: 0; font-size: 18px;">
+            <li>£120 per loose cubic metre</li>
+            <li>£140 stacked neatly at your home</li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="margin-top: 20px;"><strong>✔ Free local delivery</strong></p>
+      <p><strong>✔ Clean, seasoned logs</strong></p>
+      <p><strong>✔ Stacking available on request within 10 metres of drop-off point</strong></p>
     </div>
 
-    <!-- Cubic Metres -->
-    <div class="firewood-column">
-      <h4>🔥 Cubic Metres</h4>
-      <ul style="list-style: none; padding: 0; font-size: 18px;">
-        <li>£120 per loose cubic metre</li>
-        <li>£140 stacked neatly at your home</li>
-      </ul>
-    </div>
-  </div>
-
-  <p style="margin-top: 20px;"><strong>✔ Free local delivery</strong></p>
-  <p><strong>✔ Clean, seasoned logs</strong></p>
-  <p><strong>✔ Stacking available on request within 10 metres of drop-off point</strong></p>
-    </div>
-
-    <div id="contact" class="tab-content">
-       <form action="https://formspree.io/f/mldjeprk" method="POST">
-    <label>
-      Your email:
-      <input type="email" name="email" required>
-    </label>
-    <label>
-      Your message:
-      <textarea name="message" required></textarea>
-    </label>
-    <button type="submit">Send</button>
-  </form>
-      <p>Phone: +44 7957 517107</p>
-      <p>Email: bcb.logging2025@gmail.com</p>
+    <div id="treeservices" class="tab-content">
+      <h3>Tree Services</h3>
+      <p>We charge <strong>£20 per hour per person</strong> plus fuel and oil for machines.</p>
+      <p>We are able to <strong>rent and operate chippers and wood processors</strong>.</p>
+      <p>We also <strong>collect and return the equipment</strong> ourselves for your convenience.</p>
     </div>
   </div>
   <!-- ✅ Tabs End Here -->
 
-  <!-- ✅ JS for Tabs -->
+  <!-- ✅ Contact Form Under Tabs -->
+  <h2 style="text-align: center;">Contact Us</h2>
+
+  <div class="contact">
+    <form action="https://formspree.io/f/mldjeprk" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Your message:
+        <textarea name="message" required></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+    <p>Phone: +44 7957 517107</p>
+    <p>Email: bcb.logging2025@gmail.com</p>
+  </div>
+
   <script>
     function openTab(evt, tabId) {
       document.querySelectorAll('.tab-content').forEach(tab => {
@@ -250,8 +259,3 @@
 </body>
 </html>
 
-  }
-</script>
-
-</body>
-</html>
