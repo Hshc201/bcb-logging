@@ -21,12 +21,20 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <title>BCB Logging</title>
   <style>
     .logo {
       height: 160px;
       width: auto;
     }
+.header-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #0d2b1f; /* matches the green from the logo */
+  letter-spacing: 1px;
+}
 
     header {
       background-color: #4b5a3a;
@@ -41,12 +49,6 @@
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
     }
-header div {
-  font-weight: bold;
-  font-size: 36px;
-  color: transparent;
-  -webkit-text-stroke: 1.5px black;
-}
 
     body {
       font-family: Arial, sans-serif;
@@ -193,7 +195,7 @@ border-bottom-right-radius: 20px;
 </head>
 <body>
   <header>
-    <div>BCB Logging</div>
+   <div class="header-text">BCB Logging</div>
     <img src="https://hshc201.github.io/new-logo/Photoroom_20250618_115410.PNG" alt="BCB Logo" class="logo">
   </header>
 
