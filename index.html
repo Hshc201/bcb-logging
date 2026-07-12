@@ -7,19 +7,17 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-0H8414T2CM');
 </script>
-  <!-- ✅ Favicon -->
-<link rel="icon" href="https://hshc201.github.io/new-logo/Photoroom_20250618_115410.PNG" type="image/png">
 
-<!-- ✅ Structured Data (optional, helps Google) -->
+  <link rel="icon" href="https://hshc201.github.io/new-logo/Photoroom_20250618_115410.PNG" type="image/png">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "url": "https://hshc201.github.io/",
-  "name": "HSHC",
+  "name": "BCB Logging",
   "potentialAction": {
     "@type": "SearchAction",
     "target": "https://hshc201.github.io/?q={search_term_string}",
@@ -30,274 +28,729 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  <title>BCB Logging</title>
-  <style>
-    .logo {
-      height: 160px;
-      width: auto;
-    }
-.header-text {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  color: #0d2b1f; /* matches the green from the logo */
-  letter-spacing: 1px;
-}
+  <meta name="description" content="BCB Logging — seasoned firewood and tree services across Gloucestershire, Wiltshire, Hampshire and Northumberland.">
+  <title>BCB Logging | Firewood & Tree Services</title>
 
-    header {
-      background-color: #5c6e47;
-      color: black;
-      padding: 0 20px;
-      height: 140px;
-      font-size: 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* ── Design tokens ───────────────────────────── */
+      --forest: #23301F;      /* deep spruce — header/footer/dark sections */
+      --forest-2: #2E3F29;    /* lighter spruce for hover/gradient */
+      --bark: #4A3222;        /* walnut brown — secondary dark */
+      --parchment: #F2ECDD;   /* birch/parchment — page background */
+      --parchment-2: #FBF8F0; /* lighter card surface */
+      --ember: #C97A3D;       /* ember amber — primary accent / CTAs */
+      --ember-dark: #A8622D;
+      --moss: #6C7A52;        /* muted moss — secondary accent */
+      --ink: #221E18;         /* body text */
+      --ink-soft: #55503F;    /* secondary text */
+      --line: rgba(34,30,24,0.12);
+
+      --display: 'Fraunces', serif;
+      --body: 'Work Sans', sans-serif;
+      --mono: 'IBM Plex Mono', monospace;
+
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(34,24,10,0.14);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
     }
 
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f0dab6;
-      color: #333;
+      font-family: var(--body);
+      background: var(--parchment);
+      color: var(--ink);
+      line-height: 1.55;
     }
 
-    .hero {
-     background: url('https://raw.githubusercontent.com/Hshc201/main-image/main/IMG_1752.JPG') no-repeat center center/cover;
-      height: 600px;
+    h1, h2, h3, h4 { font-family: var(--display); margin: 0; font-weight: 700; color: var(--forest); }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ember-dark);
+      font-weight: 600;
+    }
+
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Log-ring motif (signature element) ───────── */
+    .ring-icon {
+      width: 22px; height: 22px; flex: none;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, transparent 0 3px, var(--ember) 3px 4.5px, transparent 4.5px 7px, var(--moss) 7px 8.5px, transparent 8.5px 100%);
+    }
+    .ring-graphic {
+      position: absolute;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, transparent 0 18%, rgba(242,236,221,0.16) 18% 22%, transparent 22% 38%, rgba(242,236,221,0.12) 38% 42%, transparent 42% 60%, rgba(242,236,221,0.16) 60% 64%, transparent 64% 82%, rgba(242,236,221,0.10) 82% 86%, transparent 86% 100%);
+      pointer-events: none;
+    }
+    .log-divider {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      padding: 34px 0;
+      background: var(--parchment);
+    }
+    .log-divider span {
+      width: 30px; height: 30px; border-radius: 50%;
+      background:
+        radial-gradient(circle, var(--parchment-2) 0 20%, var(--bark) 20% 26%, var(--parchment-2) 26% 42%, var(--bark) 42% 48%, var(--parchment-2) 48% 66%, var(--bark) 66% 72%, var(--parchment-2) 72% 100%);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+
+    /* ── Nav ─────────────────────────────────────── */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--forest);
+      box-shadow: 0 2px 14px rgba(0,0,0,0.18);
+    }
+    .nav-inner {
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 32px;
-      font-weight: bold;
-      position: relative;
-      text-align: center;
-      border-bottom-left-radius: 20px;
-border-bottom-right-radius: 20px;
+      justify-content: space-between;
+      padding: 12px 24px;
+      max-width: 1120px;
+      margin: 0 auto;
     }
-
-    .container {
-      padding: 20px;
-      text-align: center;
-      position: relative;
-      background: #ff7b00;
-      color: white;
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand img { height: 52px; width: auto; }
+    .brand-text {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--parchment-2);
+      letter-spacing: 0.01em;
     }
+    .brand-text small { display: block; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; color: var(--ember); font-weight: 500; text-transform: uppercase; margin-top: 2px; }
 
-    .contact {
-      background-color: #5c6e47;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      border-radius: 20px;
-      width: 90%;
-      max-width: 600px;
-      margin: 40px auto;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    nav.nav-links { display: flex; align-items: center; gap: 26px; }
+    nav.nav-links a {
+      text-decoration: none;
+      color: var(--parchment-2);
+      font-size: 15px;
+      font-weight: 500;
+      opacity: 0.88;
+      transition: opacity 0.2s ease;
     }
+    nav.nav-links a:hover { opacity: 1; color: var(--ember); }
 
-    input,
-    textarea,
-    button {
-      display: block;
-      width: 80%;
-      margin: 10px auto;
-      padding: 10px;
-      font-size: 16px;
-    }
-
-    button {
-      background-color: white;
-      color: #ff7b00;
-      border: 2px solid #ff7b00;
+    .nav-cta {
+      background: var(--ember);
+      color: var(--parchment-2) !important;
+      padding: 10px 18px;
       border-radius: 8px;
-      padding: 10px 20px;
-      font-size: 18px;
-      font-weight: bold;
+      font-weight: 600 !important;
+      opacity: 1 !important;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+    .nav-cta:hover { background: var(--ember-dark); transform: translateY(-1px); }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--parchment-2);
+      font-size: 26px;
       cursor: pointer;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    button:hover {
-      background-color: #ff7b00;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    @media (max-width: 880px) {
+      nav.nav-links {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--forest);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 24px 20px;
+        gap: 16px;
+        display: none;
+        box-shadow: 0 12px 18px rgba(0,0,0,0.2);
+      }
+      nav.nav-links.open { display: flex; }
+      .nav-toggle { display: block; }
+      .brand-text { font-size: 19px; }
     }
 
-    button:active {
-      transform: translateY(1px);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* ── Hero ────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 84vh;
+      display: flex;
+      align-items: flex-end;
+      background: linear-gradient(180deg, rgba(15,18,10,0.35) 0%, rgba(15,18,10,0.55) 55%, rgba(15,18,10,0.88) 100%),
+                  url('https://raw.githubusercontent.com/Hshc201/main-image/main/IMG_1752.JPG') center/cover no-repeat;
+      overflow: hidden;
     }
-
-    .tab-container {
-      width: 90%;
+    .ring-graphic.hero-ring { width: 520px; height: 520px; top: -160px; right: -140px; }
+    .hero-inner { position: relative; z-index: 2; padding: 70px 24px 56px; max-width: 1120px; margin: 0 auto; width: 100%; }
+    .hero h1 {
+      color: #fff;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.04;
       max-width: 800px;
-      margin: 40px auto;
+      letter-spacing: -0.01em;
+    }
+    .hero h1 em { color: var(--ember); font-style: italic; }
+    .hero p.lede {
+      color: #EFE9DA;
+      font-size: 18px;
+      max-width: 560px;
+      margin: 20px 0 0;
+    }
+    .hero .counties {
+      margin-top: 22px;
+      font-family: var(--mono);
+      font-size: 12.5px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #D9CFB4;
+    }
+    .hero-ctas { display: flex; gap: 14px; margin-top: 34px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-block;
+      font-family: var(--body);
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 26px;
+      border-radius: 9px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--ember); color: #fff; }
+    .btn-primary:hover { background: var(--ember-dark); }
+    .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.55); }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .btn-dark { background: var(--forest); color: var(--parchment-2); }
+    .btn-dark:hover { background: var(--forest-2); }
+
+    /* ── Sections ────────────────────────────────── */
+    section { padding: 84px 0; }
+    .section-head { max-width: 620px; margin-bottom: 44px; }
+    .section-head h2 { font-size: clamp(28px, 3.6vw, 40px); margin-top: 10px; }
+    .section-head p { color: var(--ink-soft); font-size: 17px; margin-top: 14px; }
+
+    /* About / trust */
+    .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; }
+    .about-grid p { font-size: 17px; color: var(--ink-soft); }
+    .feature-list { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+    .feature-list li { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 15.5px; color: var(--forest); }
+
+    /* Pricing */
+    .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
+    .price-card {
+      background: var(--parchment-2);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+    .price-card h3 { font-size: 21px; margin-bottom: 4px; }
+    .price-card .sub { color: var(--ink-soft); font-size: 13.5px; margin-bottom: 20px; }
+    .price-row { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-top: 1px dashed var(--line); }
+    .price-row:first-of-type { border-top: none; }
+    .price-row .label { font-size: 15px; color: var(--ink); }
+    .price-row .amount { font-family: var(--mono); font-weight: 600; font-size: 18px; color: var(--ember-dark); }
+    .assurances { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 30px; }
+    .assurances span { font-size: 14.5px; font-weight: 600; color: var(--forest); display: flex; align-items: center; gap: 8px; }
+
+    /* Tree services */
+    .services-panel {
+      background: var(--forest);
+      color: var(--parchment-2);
+      border-radius: var(--radius);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+    .services-panel p { color: #DCD5C0; font-size: 16px; }
+    .services-panel strong { color: var(--ember); }
+    .rate-badge {
+      font-family: var(--mono);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 10px;
+      padding: 22px;
       text-align: center;
     }
+    .rate-badge .amount { font-size: 34px; font-weight: 600; color: var(--ember); }
+    .rate-badge .unit { font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #C9C2AC; margin-top: 4px; }
 
-    .tab-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 20px;
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
     }
-
-    .tab-button {
-      padding: 10px 20px;
-      border: none;
-      background-color: #ff7b00;
-      color: white;
+    .gallery-grid figure {
+      margin: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
       cursor: pointer;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
+      position: relative;
     }
-
-    .tab-button:hover {
-      background-color: #e56e00;
+    .gallery-grid img {
+      width: 100%; height: 230px; object-fit: cover;
+      transition: transform 0.4s ease;
     }
+    .gallery-grid figure:hover img { transform: scale(1.06); }
 
-    .tab-button.active {
-      background-color: #333;
+    /* Order */
+    .order-section { background: var(--bark); color: var(--parchment-2); }
+    .order-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start; }
+    .order-grid .section-head h2, .order-grid .eyebrow { color: var(--parchment-2); }
+    .order-grid .section-head p { color: #E4D9C6; }
+    .order-note { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: 10px; padding: 18px 20px; margin-top: 24px; font-size: 14.5px; color: #E4D9C6; }
+
+    .order-form {
+      background: var(--parchment-2);
+      color: var(--ink);
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
-
-    .tab-content {
-      display: none;
-      padding: 20px;
-      background-color: #5c6e47;
-      color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    .order-form label { font-weight: 600; font-size: 14px; display: block; margin-top: 16px; margin-bottom: 6px; color: var(--forest); }
+    .order-form label:first-of-type { margin-top: 0; }
+    .order-form input, .order-form select {
+      width: 100%;
+      padding: 12px 14px;
+      font-family: var(--body);
+      font-size: 15px;
+      border: 1.5px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
     }
-
-    .tab-content.active {
-      display: block;
+    .order-form input:focus, .order-form select:focus,
+    .contact-form input:focus, .contact-form textarea:focus {
+      outline: 3px solid rgba(201,122,61,0.35);
+      border-color: var(--ember);
     }
-
-    .firewood-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-      margin-top: 20px;
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .order-form button, .contact-form button { margin-top: 24px; width: 100%; }
+    #orderSummary {
+      background: var(--parchment);
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-top: 18px;
+      font-family: var(--mono);
+      font-size: 13.5px;
+      color: var(--ink-soft);
     }
+    #orderStatus { margin-top: 14px; font-weight: 600; font-size: 14.5px; min-height: 20px; }
 
-    .firewood-column {
-      flex: 1 1 250px;
-      background-color: #fffaf2;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      max-width: 300px;
-       color: #333;
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .contact-form {
+      background: var(--parchment-2);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px;
+      border: 1px solid var(--line);
+    }
+    .contact-form label { font-weight: 600; font-size: 14px; color: var(--forest); display: block; margin-top: 16px; margin-bottom: 6px; }
+    .contact-form label:first-of-type { margin-top: 0; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 12px 14px; font-family: var(--body); font-size: 15px;
+      border: 1.5px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink);
+    }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
+
+    .contact-details { display: flex; flex-direction: column; gap: 22px; justify-content: center; }
+    .contact-details .item { display: flex; align-items: center; gap: 14px; }
+    .contact-details .item .ring-icon { width: 30px; height: 30px; }
+    .contact-details .item a { text-decoration: none; font-weight: 600; font-size: 17px; color: var(--forest); }
+    .contact-details .item .label { display: block; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 2px; }
+
+    /* Footer */
+    footer {
+      background: var(--forest);
+      color: #C9C2AC;
+      padding: 46px 0 28px;
+    }
+    .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; align-items: center; }
+    .footer-inner .brand-text { font-size: 19px; }
+    footer .foot-links { display: flex; gap: 22px; flex-wrap: wrap; }
+    footer .foot-links a { text-decoration: none; color: #C9C2AC; font-size: 14.5px; }
+    footer .foot-links a:hover { color: var(--ember); }
+    footer .foot-bottom { text-align: center; margin-top: 30px; font-size: 12.5px; color: #8B8570; }
+
+    /* Reveal-on-scroll */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (max-width: 880px) {
+      .about-grid, .pricing-grid, .services-panel, .order-grid, .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      section { padding: 60px 0; }
     }
   </style>
 </head>
 <body>
-  <header>
-   <div class="header-text">BCB Logging</div>
-    <img src="https://hshc201.github.io/new-logo/Photoroom_20250618_115410.PNG" alt="BCB Logo" class="logo">
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="#top" class="brand">
+        <img src="https://hshc201.github.io/new-logo/Photoroom_20250618_115410.PNG" alt="BCB Logging logo">
+        <span class="brand-text">BCB Logging<small>Timber & Firewood</small></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#firewood">Firewood</a>
+        <a href="#services">Tree Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#order" class="nav-cta">Order Firewood</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="hero">
-    Quality Timber Solutions
-  </div>
+  <div id="top"></div>
 
-  <!-- ✅ Tabs Start Here -->
-  <div class="tab-container">
-    <div class="tab-buttons">
-      <button class="tab-button active" onclick="openTab(event, 'about')">About</button>
-      <button class="tab-button" onclick="openTab(event, 'Firewood')">Firewood</button>
-      <button class="tab-button" onclick="openTab(event, 'treeservices')">Tree Services</button>
+  <!-- ── Hero ─────────────────────────────────────── -->
+  <section class="hero" style="padding:0;">
+    <div class="ring-graphic hero-ring" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <h1>Seasoned firewood, <em>delivered ready to burn.</em></h1>
+      <p class="lede">BCB Logging delivers reliable tree services and quality firewood, cut, stacked and dropped straight at your door.</p>
+      <div class="hero-ctas">
+        <a href="#order" class="btn btn-primary">Order firewood</a>
+        <a href="#contact" class="btn btn-ghost">Get a quote</a>
+      </div>
+      <p class="counties">Gloucestershire · Wiltshire · Hampshire · Northumberland</p>
     </div>
+  </section>
 
-    <div id="about" class="tab-content active">
-      <p>BCB Logging delivers high-quality, reliable tree services and firewood solutions across Gloucestershire, Wiltshire, Hampshire and Northumberland.</p>
-      <ul style="list-style: none; padding: 0; font-weight: bold;">
-        <li>- Tree felling and wood clearance</li>
-        <li>- Seasoned hardwood and softwood log sales</li>
-        <li>- Delivery and stacking straight to your home, ready to burn</li>
+  <!-- ── About ────────────────────────────────────── -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <span class="eyebrow">About us</span>
+        <h2>Local timber work, done properly.</h2>
+        <p>BCB Logging delivers high-quality, reliable tree services and firewood solutions across Gloucestershire, Wiltshire, Hampshire and Northumberland.</p>
+      </div>
+      <ul class="feature-list reveal">
+        <li><span class="ring-icon"></span> Tree felling and wood clearance</li>
+        <li><span class="ring-icon"></span> Seasoned hardwood and softwood log sales</li>
+        <li><span class="ring-icon"></span> Delivery and stacking straight to your home, ready to burn</li>
       </ul>
     </div>
+  </section>
 
-    <div id="Firewood" class="tab-content">
-      <h3>Firewood Pricing <small>(Mixed hardwood – Oak, Ash, Cherry)</small></h3>
+  <div class="log-divider" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
 
-      <div class="firewood-grid">
-        <div class="firewood-column">
-          <h4>🪵 Ton Bags</h4>
-          <ul style="list-style: none; padding: 0; font-size: 18px;">
-            <li>£75 loose (approx. 0.6m³)</li>
-            <li>£90 stacked neatly at your home</li>
-          </ul>
+  <!-- ── Firewood pricing ─────────────────────────── -->
+  <section id="firewood">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Firewood pricing</span>
+        <h2>Mixed hardwood — Oak, Ash, Cherry.</h2>
+        <p>Choose loose delivery or have it stacked neatly at your home.</p>
+      </div>
+      <div class="pricing-grid reveal">
+        <div class="price-card">
+          <h3>Ton Bags</h3>
+          <div class="sub">Approx. 0.6m³ per bag</div>
+          <div class="price-row"><span class="label">Loose</span><span class="amount">£75</span></div>
+          <div class="price-row"><span class="label">Stacked at your home</span><span class="amount">£90</span></div>
         </div>
-
-        <div class="firewood-column">
-          <h4>🔥 Cubic Metres</h4>
-          <ul style="list-style: none; padding: 0; font-size: 18px;">
-            <li>£120 per loose cubic metre</li>
-            <li>£140 stacked neatly at your home</li>
-          </ul>
+        <div class="price-card">
+          <h3>Cubic Metres</h3>
+          <div class="sub">Sold per loose cubic metre</div>
+          <div class="price-row"><span class="label">Loose</span><span class="amount">£120</span></div>
+          <div class="price-row"><span class="label">Stacked at your home</span><span class="amount">£140</span></div>
         </div>
       </div>
-
-      <p style="margin-top: 20px;"><strong>✔ Free local delivery</strong></p>
-      <p><strong>✔ Clean, seasoned logs</strong></p>
-      <p><strong>✔ Stacking available on request within 10 metres of drop-off point</strong></p>
+      <div class="assurances reveal">
+        <span><span class="ring-icon"></span> Free local delivery</span>
+        <span><span class="ring-icon"></span> Clean, seasoned logs</span>
+        <span><span class="ring-icon"></span> Stacking within 10 metres of drop-off</span>
+      </div>
     </div>
+  </section>
 
-    <div id="treeservices" class="tab-content">
-      <h3>Tree Services</h3>
-      <p>We charge <strong>£20 per hour per person</strong> plus fuel and oil for machines.</p>
-      <p>We are able to <strong>rent and operate chippers and wood processors</strong>.</p>
-      <p>We also <strong>collect and return the equipment</strong> ourselves for your convenience.</p>
+  <!-- ── Tree services ────────────────────────────── -->
+  <section id="services">
+    <div class="wrap">
+      <div class="services-panel reveal">
+        <div>
+          <span class="eyebrow" style="color:var(--ember)">Tree services</span>
+          <h2 style="color:#fff; margin-top:10px;">Felling, clearance & equipment hire.</h2>
+          <p>We charge <strong>£20 per hour, per person</strong>, plus fuel and oil for machines. We can also rent and operate chippers and wood processors on site, and we collect and return the equipment ourselves — no extra hassle for you.</p>
+        </div>
+        <div class="rate-badge">
+          <div class="amount">£20</div>
+          <div class="unit">Per hour, per person</div>
+        </div>
+      </div>
     </div>
-  </div>
-  <!-- ✅ Tabs End Here -->
+  </section>
 
-  <!-- ✅ Contact Form Under Tabs -->
-  <h2 style="text-align: center;">Contact Us</h2>
+  <!-- ── Gallery ──────────────────────────────────── -->
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Gallery</span>
+        <h2>Recent work.</h2>
+        <p>A look at jobs we've completed and firewood ready to go out.</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <!--
+          🔧 REPLACE THESE: swap each src for your own photo URLs.
+          Upload photos to a GitHub repo (as you did for the logo/hero
+          image) and paste the raw.githubusercontent.com link here.
+          Add or remove <figure> blocks freely — the grid reflows.
+        -->
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/IMG_1752.JPG" alt="BCB Logging work photo">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://hshc201.github.io/new-logo/Photoroom_20250618_115410.PNG" alt="BCB Logging branding">
+        </figure>
+      </div>
+    </div>
+  </section>
 
-  <div class="contact">
-    <form action="https://formspree.io/f/mldjeprk" method="POST">
-      <label>
-        Your email:
-        <input type="email" name="email" required>
-      </label>
-      <label>
-        Your message:
-        <textarea name="message" required></textarea>
-      </label>
-      <button type="submit">Send</button>
-    </form>
-    <p>Phone: 07340215920</p>
-    <p>Email: bcb.logging2025@gmail.com</p>
-    <p>Whatsapp:+44 1454218100</p>
-  </div>
+  <!-- ── Order Now ────────────────────────────────── -->
+  <section id="order" class="order-section">
+    <div class="wrap order-grid">
+      <div class="reveal">
+        <span class="eyebrow">Order now</span>
+        <h2>Get firewood booked in.</h2>
+        <p>Pick what you need and a delivery date from the days we currently have free. We'll confirm by phone or email.</p>
+        <div class="order-note">Delivery dates shown are the ones we currently have availability for — the list updates as our schedule fills up.</div>
+      </div>
+
+      <form class="order-form reveal" id="orderForm">
+        <label for="woodType">Order type</label>
+        <select id="woodType" required>
+          <option value="Ton Bag - Loose">Ton Bag – Loose (£75)</option>
+          <option value="Ton Bag - Stacked">Ton Bag – Stacked (£90)</option>
+          <option value="Cubic Metre - Loose">Cubic Metre – Loose (£120)</option>
+          <option value="Cubic Metre - Stacked">Cubic Metre – Stacked (£140)</option>
+        </select>
+
+        <div class="form-row">
+          <div>
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" min="1" value="1" required>
+          </div>
+          <div>
+            <label for="deliveryDate">Delivery date</label>
+            <select id="deliveryDate" required></select>
+          </div>
+        </div>
+
+        <label for="custName">Name</label>
+        <input type="text" id="custName" required>
+
+        <label for="custAddress">Delivery address</label>
+        <input type="text" id="custAddress" required>
+
+        <div class="form-row">
+          <div>
+            <label for="custPhone">Phone number</label>
+            <input type="tel" id="custPhone" required>
+          </div>
+          <div>
+            <label for="custEmail">Email</label>
+            <input type="email" id="custEmail" required>
+          </div>
+        </div>
+
+        <div id="orderSummary"></div>
+        <button type="submit" class="btn btn-primary">Place order</button>
+        <p id="orderStatus"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── Contact ──────────────────────────────────── -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <form class="contact-form reveal" action="https://formspree.io/f/REPLACE_WITH_NEW_FORM_ID" method="POST">
+        <span class="eyebrow">Get in touch</span>
+        <h2 style="margin-top:8px;">Send us a message.</h2>
+        <label for="contactEmail">Your email</label>
+        <input type="email" id="contactEmail" name="email" required>
+        <label for="contactMessage">Your message</label>
+        <textarea id="contactMessage" name="message" required></textarea>
+        <button type="submit" class="btn btn-dark">Send message</button>
+      </form>
+
+      <div class="contact-details reveal">
+        <div class="item">
+          <span class="ring-icon"></span>
+          <div><span class="label">Phone</span><a href="tel:07340215920">07340 215920</a></div>
+        </div>
+        <div class="item">
+          <span class="ring-icon"></span>
+          <div><span class="label">Email</span><a href="mailto:bcb.logging2025@gmail.com">bcb.logging2025@gmail.com</a></div>
+        </div>
+        <div class="item">
+          <span class="ring-icon"></span>
+          <div><span class="label">WhatsApp</span><a href="https://wa.me/441454218100">+44 1454 218100</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span class="brand-text" style="color:#fff;">BCB Logging<small style="color:var(--ember)">Timber & Firewood</small></span>
+      <div class="foot-links">
+        <a href="#about">About</a>
+        <a href="#firewood">Firewood</a>
+        <a href="#services">Tree Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="wrap foot-bottom">© <span id="year"></span> BCB Logging — Gloucestershire · Wiltshire · Hampshire · Northumberland</div>
+  </footer>
 
   <script>
-    function openTab(evt, tabId) {
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      document.querySelectorAll('.tab-button').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      document.getElementById(tabId).classList.add('active');
-      evt.currentTarget.classList.add('active');
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', false);
+    }));
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('in'));
     }
+
+    // ✅ ---------- ORDER FORM LOGIC ----------
+
+    // 🔧 REPLACE: list the dates you currently have free for delivery.
+    // Format: 'YYYY-MM-DD'. Dates automatically drop off the list once
+    // they've passed, so just keep adding new ones as your diary fills up.
+    const availableDates = [
+      '2026-07-18',
+      '2026-07-19',
+      '2026-07-25',
+      '2026-07-26',
+      '2026-08-01',
+      '2026-08-02'
+    ];
+
+    function formatDateLabel(dateStr) {
+      const d = new Date(dateStr + 'T00:00:00');
+      return d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    function populateDates() {
+      const select = document.getElementById('deliveryDate');
+      select.innerHTML = '';
+      const today = new Date();
+      today.setHours(0,0,0,0);
+      const futureDates = availableDates.filter(d => new Date(d + 'T00:00:00') >= today);
+
+      if (futureDates.length === 0) {
+        const opt = document.createElement('option');
+        opt.textContent = 'No dates currently available — please call us';
+        opt.disabled = true;
+        select.appendChild(opt);
+        return;
+      }
+      futureDates.forEach(dateStr => {
+        const opt = document.createElement('option');
+        opt.value = dateStr;
+        opt.textContent = formatDateLabel(dateStr);
+        select.appendChild(opt);
+      });
+    }
+    populateDates();
+
+    // 🔧 REPLACE: your Google Sheet endpoint (via a free connector like
+    // SheetDB.io). See the setup notes provided alongside this file.
+    const ORDER_SHEET_ENDPOINT = 'https://sheetdb.io/api/v1/uk1qgq5w9423u';
+
+    document.getElementById('orderForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const statusEl = document.getElementById('orderStatus');
+
+      const order = {
+        Timestamp: new Date().toISOString(),
+        Name: document.getElementById('custName').value,
+        Address: document.getElementById('custAddress').value,
+        Phone: document.getElementById('custPhone').value,
+        Email: document.getElementById('custEmail').value,
+        OrderType: document.getElementById('woodType').value,
+        Quantity: document.getElementById('quantity').value,
+        DeliveryDate: document.getElementById('deliveryDate').value
+      };
+
+      statusEl.style.color = 'var(--parchment-2)';
+      statusEl.textContent = 'Sending order...';
+
+      try {
+        const response = await fetch(ORDER_SHEET_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ data: [order] })
+        });
+        if (!response.ok) throw new Error('Request failed');
+
+        statusEl.style.color = '#B7D9A8';
+        statusEl.textContent = 'Order placed! We will confirm your delivery shortly.';
+        document.getElementById('orderForm').reset();
+        populateDates();
+      } catch (err) {
+        statusEl.style.color = '#EFC0B0';
+        statusEl.textContent = 'Something went wrong sending your order — please call or WhatsApp us instead.';
+      }
+    });
   </script>
 </body>
 </html>
-
-
-
