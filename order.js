@@ -1,16 +1,7 @@
-const availableDates = [
-  '2026-09-06',
-  '2026-10-04',
-  '2026-11-08',
-  '2026-12-06',
-  '2027-01-31',
-  '2027-02-07',
-  '2027-03-07'
-];
-
 const MAX_DELIVERIES_PER_DAY = 5;
 
 const ORDER_SHEET_ENDPOINT = 'https://sheetdb.io/api/v1/uk1qgq5w9423u';
+const FIREWOOD_AVAILABILITY_ENDPOINT = `${ORDER_SHEET_ENDPOINT}?sheet=FirewoodAvailability`;
 
 function formatDateLabel(dateStr) {
   const d = new Date(dateStr + 'T00:00:00');
@@ -48,6 +39,27 @@ function getDeliveryDateField(row) {
   return key ? row[key] : null;
 }
 
+function getFieldByName(row, name) {
+  const key = Object.keys(row).find(k => k.replace(/\s+/g, '').toLowerCase() === name.toLowerCase());
+  return key ? row[key] : null;
+}
+
+// Reads your list of available delivery dates from the FirewoodAvailability
+// tab in your Google Sheet — add or remove dates there any time, no code
+// changes needed. Fails safe: returns an empty list if the sheet can't be read.
+async function getAvailableDates() {
+  try {
+    const res = await fetch(FIREWOOD_AVAILABILITY_ENDPOINT);
+    if (!res.ok) throw new Error('Could not load firewood availability');
+    const rows = await res.json();
+    const dates = rows.map(r => normalizeDate(getFieldByName(r, 'date'))).filter(Boolean);
+    return [...new Set(dates)].sort();
+  } catch (err) {
+    console.error('Could not load firewood availability:', err);
+    return [];
+  }
+}
+
 async function getDateCounts() {
   const counts = {};
   try {
@@ -71,8 +83,9 @@ async function populateDates() {
 
   const today = new Date();
   today.setHours(0,0,0,0);
-  const futureDates = availableDates.filter(d => new Date(d + 'T00:00:00') >= today);
-  const counts = await getDateCounts();
+
+  const [sheetDates, counts] = await Promise.all([getAvailableDates(), getDateCounts()]);
+  const futureDates = sheetDates.filter(d => new Date(d + 'T00:00:00') >= today);
 
   const openDates = futureDates.filter(d => (counts[d] || 0) < MAX_DELIVERIES_PER_DAY);
 
