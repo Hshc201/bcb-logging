@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Firewood pricing from BCB Logging — ton bags and cubic metres of seasoned mixed hardwood.">
+<title>BCB Logging | Firewood</title>
+<link rel="icon" href="https://raw.githubusercontent.com/Hshc201/main-image/main/Improve%20Contrast%20on%20Green%20Background%20(4).png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="home.html" class="brand">
+      <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/Improve%20Contrast%20on%20Green%20Background%20(4).png" alt="BCB Logging logo">
+      <span class="brand-text">BCB Logging<small>Timber & Firewood</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="home.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="firewood.html" class="active">Firewood</a>
+      <a href="order.html" class="nav-cta">Order</a>
+      <a href="book-services.html">Book Services</a>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Firewood pricing</span>
+      <h2>Mixed hardwood — Oak, Ash, Cherry.</h2>
+      <p>Choose loose delivery or have it stacked neatly at your home.</p>
+    </div>
+    <div class="pricing-grid reveal">
+      <div class="price-card">
+        <h3>Ton Bags</h3>
+        <div class="sub">Approx. 0.6m³ per bag</div>
+        <div class="price-row"><span class="label">Loose</span><span class="amount">£75</span></div>
+        <div class="price-row"><span class="label">Stacked at your home</span><span class="amount">£90</span></div>
+      </div>
+      <div class="price-card">
+        <h3>Cubic Metres</h3>
+        <div class="sub">Sold per loose cubic metre</div>
+        <div class="price-row"><span class="label">Loose</span><span class="amount">£120</span></div>
+        <div class="price-row"><span class="label">Stacked at your home</span><span class="amount">£140</span></div>
+      </div>
+    </div>
+    <div class="assurances reveal">
+      <span><span class="ring-icon"></span> Free local delivery</span>
+      <span><span class="ring-icon"></span> Clean, seasoned logs</span>
+      <span><span class="ring-icon"></span> Stacking within 10 metres of drop-off</span>
+    </div>
+    <div class="reveal" style="margin-top:36px;">
+      <a href="order.html" class="btn btn-primary">Order firewood</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="wrap contact-compact reveal">
+    <span class="eyebrow">Get in touch</span>
+    <h2>We'd love to hear from you</h2>
+    <p class="sub">Questions about a job or an order? Send a message and we'll get back to you.</p>
+    <form id="contactForm" action="https://formspree.io/f/xrenzvbz" method="POST">
+      <label for="contactEmail">Your email</label>
+      <input type="email" id="contactEmail" name="email" required>
+      <label for="contactMessage">Your message</label>
+      <textarea id="contactMessage" name="message" required></textarea>
+      <button type="submit" class="btn btn-outline">Send message</button>
+      <p id="contactStatus"></p>
+    </form>
+    <div class="contact-links">
+      <a href="tel:07340215920">07340 215920</a>
+      <a href="mailto:bcb.logging2025@gmail.com">bcb.logging2025@gmail.com</a>
+      <a href="https://wa.me/441454218100">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span class="brand-text" style="color:#fff;">BCB Logging<small style="color:var(--ember)">Timber & Firewood</small></span>
+    <div class="foot-links">
+      <a href="home.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="firewood.html">Firewood</a>
+      <a href="order.html">Order</a>
+      <a href="book-services.html">Book Services</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">© <span id="year"></span> BCB Logging — Gloucestershire · Wiltshire · Hampshire · Northumberland</div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>
