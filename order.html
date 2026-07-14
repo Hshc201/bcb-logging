@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BCB Logging — seasoned firewood and tree services across Gloucestershire, Wiltshire, Hampshire and Northumberland.">
-<title>BCB Logging | Home</title>
+<meta name="description" content="Order seasoned firewood from BCB Logging and pick a delivery date.">
+<title>BCB Logging | Order Firewood</title>
 <link rel="icon" href="https://raw.githubusercontent.com/Hshc201/main-image/main/Improve%20Contrast%20on%20Green%20Background%20(4).png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,67 +21,64 @@
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav class="nav-links" id="navLinks">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
       <a href="firewood.html">Firewood</a>
-      <a href="order.html" class="nav-cta">Order</a>
+      <a href="order.html" class="nav-cta active">Order</a>
       <a href="book-services.html">Book Services</a>
     </nav>
   </div>
 </header>
 
-<section class="hero" style="padding:0;">
-  <div class="ring-graphic hero-ring" aria-hidden="true"></div>
-  <div class="hero-inner">
-    <h1>Seasoned firewood, <em>delivered ready to burn.</em></h1>
-    <p class="lede">BCB Logging delivers reliable tree services and quality firewood, cut, stacked and dropped straight at your door.</p>
-    <div class="hero-ctas">
-      <a href="order.html" class="btn btn-primary">Order firewood</a>
-      <a href="book-services.html" class="btn btn-ghost">Book tree work</a>
-    </div>
-    <p class="counties">Gloucestershire · Wiltshire · Hampshire · Northumberland</p>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap about-grid">
+<section class="order-section">
+  <div class="wrap order-grid">
     <div class="reveal">
-      <span class="eyebrow">About us</span>
-      <h2>Local timber work, done properly.</h2>
-      <p>We're a small, hands-on outfit that takes on tree work and firewood supply the way it should be done — properly seasoned logs, tidy site clearance, and no job left half-finished. Whether you need a few ton bags for the winter or a full tree felled and cleared, we turn up, do the work ourselves, and leave things better than we found them. Covering Gloucestershire, Wiltshire, Hampshire and Northumberland.</p>
+      <span class="eyebrow">Order now</span>
+      <h2>Get firewood booked in.</h2>
+      <p>Pick what you need and a delivery date from the days we currently have free. We'll confirm by phone or email.</p>
+      <div class="order-note">Delivery dates shown are the ones we currently have availability for — the list updates as our schedule fills up.</div>
     </div>
-    <ul class="feature-list reveal">
-      <li><span class="ring-icon"></span> Tree felling and wood clearance</li>
-      <li><span class="ring-icon"></span> Seasoned hardwood and softwood log sales</li>
-      <li><span class="ring-icon"></span> Delivery and stacking straight to your home, ready to burn</li>
-    </ul>
-  </div>
-</section>
 
-<section>
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Get started</span>
-      <h2>Where would you like to go?</h2>
-    </div>
-    <div class="quick-links reveal">
-      <a class="quick-link" href="gallery.html">
-        <span class="eyebrow">Browse</span>
-        <h3>Gallery</h3>
-      </a>
-      <a class="quick-link" href="firewood.html">
-        <span class="eyebrow">Pricing</span>
-        <h3>Firewood</h3>
-      </a>
-      <a class="quick-link" href="order.html">
-        <span class="eyebrow">Book in</span>
-        <h3>Order Firewood</h3>
-      </a>
-      <a class="quick-link" href="book-services.html">
-        <span class="eyebrow">Tree work</span>
-        <h3>Book Services</h3>
-      </a>
-    </div>
+    <form class="order-form reveal" id="orderForm">
+      <label for="woodType">Order type</label>
+      <select id="woodType" required>
+        <option value="Ton Bag - Loose">Ton Bag – Loose (£75)</option>
+        <option value="Ton Bag - Stacked">Ton Bag – Stacked (£90)</option>
+        <option value="Cubic Metre - Loose">Cubic Metre – Loose (£120)</option>
+        <option value="Cubic Metre - Stacked">Cubic Metre – Stacked (£140)</option>
+      </select>
+
+      <div class="form-row">
+        <div>
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" min="1" value="1" required>
+        </div>
+        <div>
+          <label for="deliveryDate">Delivery date</label>
+          <select id="deliveryDate" required></select>
+        </div>
+      </div>
+
+      <label for="custName">Name</label>
+      <input type="text" id="custName" required>
+
+      <label for="custAddress">Delivery address</label>
+      <input type="text" id="custAddress" required>
+
+      <div class="form-row">
+        <div>
+          <label for="custPhone">Phone number</label>
+          <input type="tel" id="custPhone" required>
+        </div>
+        <div>
+          <label for="custEmail">Email</label>
+          <input type="email" id="custEmail" required>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Place order</button>
+      <p id="orderStatus"></p>
+    </form>
   </div>
 </section>
 
@@ -121,5 +118,6 @@
 </footer>
 
 <script src="shared.js"></script>
+<script src="order.js"></script>
 </body>
 </html>

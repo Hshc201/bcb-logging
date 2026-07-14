@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BCB Logging — seasoned firewood and tree services across Gloucestershire, Wiltshire, Hampshire and Northumberland.">
-<title>BCB Logging | Home</title>
+<meta name="description" content="Book tree felling, clearance and equipment hire with BCB Logging.">
+<title>BCB Logging | Book Services</title>
 <link rel="icon" href="https://raw.githubusercontent.com/Hshc201/main-image/main/Improve%20Contrast%20on%20Green%20Background%20(4).png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,67 +21,67 @@
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav class="nav-links" id="navLinks">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
       <a href="firewood.html">Firewood</a>
       <a href="order.html" class="nav-cta">Order</a>
-      <a href="book-services.html">Book Services</a>
+      <a href="book-services.html" class="active">Book Services</a>
     </nav>
   </div>
 </header>
 
-<section class="hero" style="padding:0;">
-  <div class="ring-graphic hero-ring" aria-hidden="true"></div>
-  <div class="hero-inner">
-    <h1>Seasoned firewood, <em>delivered ready to burn.</em></h1>
-    <p class="lede">BCB Logging delivers reliable tree services and quality firewood, cut, stacked and dropped straight at your door.</p>
-    <div class="hero-ctas">
-      <a href="order.html" class="btn btn-primary">Order firewood</a>
-      <a href="book-services.html" class="btn btn-ghost">Book tree work</a>
-    </div>
-    <p class="counties">Gloucestershire · Wiltshire · Hampshire · Northumberland</p>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap about-grid">
-    <div class="reveal">
-      <span class="eyebrow">About us</span>
-      <h2>Local timber work, done properly.</h2>
-      <p>We're a small, hands-on outfit that takes on tree work and firewood supply the way it should be done — properly seasoned logs, tidy site clearance, and no job left half-finished. Whether you need a few ton bags for the winter or a full tree felled and cleared, we turn up, do the work ourselves, and leave things better than we found them. Covering Gloucestershire, Wiltshire, Hampshire and Northumberland.</p>
-    </div>
-    <ul class="feature-list reveal">
-      <li><span class="ring-icon"></span> Tree felling and wood clearance</li>
-      <li><span class="ring-icon"></span> Seasoned hardwood and softwood log sales</li>
-      <li><span class="ring-icon"></span> Delivery and stacking straight to your home, ready to burn</li>
-    </ul>
-  </div>
-</section>
-
 <section>
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Get started</span>
-      <h2>Where would you like to go?</h2>
+    <div class="services-panel reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--ember)">Tree services</span>
+        <h2 style="color:#fff; margin-top:10px;">Felling, clearance & equipment hire.</h2>
+        <p>We charge <strong>£25 per hour, per person</strong>, plus fuel and oil for machines. We can also rent and operate chippers and wood processors on site, and we collect and return the equipment ourselves — no extra hassle for you.</p>
+      </div>
+      <div class="rate-badge">
+        <div class="amount">£25</div>
+        <div class="unit">Per hour, per person</div>
+      </div>
     </div>
-    <div class="quick-links reveal">
-      <a class="quick-link" href="gallery.html">
-        <span class="eyebrow">Browse</span>
-        <h3>Gallery</h3>
-      </a>
-      <a class="quick-link" href="firewood.html">
-        <span class="eyebrow">Pricing</span>
-        <h3>Firewood</h3>
-      </a>
-      <a class="quick-link" href="order.html">
-        <span class="eyebrow">Book in</span>
-        <h3>Order Firewood</h3>
-      </a>
-      <a class="quick-link" href="book-services.html">
-        <span class="eyebrow">Tree work</span>
-        <h3>Book Services</h3>
-      </a>
+  </div>
+</section>
+
+<section class="order-section">
+  <div class="wrap order-grid">
+    <div class="reveal">
+      <span class="eyebrow">Book a job</span>
+      <h2>Get tree work booked in.</h2>
+      <p>Tell us about the job — what needs doing, roughly how big — and pick a date from our current availability. We'll confirm the details and a price by phone.</p>
+      <div class="order-note">Availability shown here is separate from firewood delivery dates — these are the days we currently have free for felling, clearance and tree work.</div>
     </div>
+
+    <form class="order-form reveal" id="bookingForm">
+      <label for="jobName">Name</label>
+      <input type="text" id="jobName" required>
+
+      <label for="jobAddress">Site address</label>
+      <input type="text" id="jobAddress" required>
+
+      <div class="form-row">
+        <div>
+          <label for="jobPhone">Phone number</label>
+          <input type="tel" id="jobPhone" required>
+        </div>
+        <div>
+          <label for="jobEmail">Email</label>
+          <input type="email" id="jobEmail" required>
+        </div>
+      </div>
+
+      <label for="jobDescription">Describe the job</label>
+      <textarea id="jobDescription" required placeholder="e.g. one large oak needs felling near the fence line, plus clearance of fallen branches"></textarea>
+
+      <label for="jobDate">Preferred date</label>
+      <select id="jobDate" required></select>
+
+      <button type="submit" class="btn btn-primary">Request booking</button>
+      <p id="bookingStatus"></p>
+    </form>
   </div>
 </section>
 
@@ -121,5 +121,6 @@
 </footer>
 
 <script src="shared.js"></script>
+<script src="book-services.js"></script>
 </body>
 </html>
