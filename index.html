@@ -10,7 +10,7 @@
   gtag('config', 'G-0H8414T2CM');
 </script>
 
-  <link rel="icon" href="https://hshc201.github.io/new-logo/Photoroom_20250618_115410.PNG" type="image/png">
+  <link rel="icon" href="https://raw.githubusercontent.com/Hshc201/main-image/main/Improve%20Contrast%20on%20Green%20Background%20(4).png" type="image/png">
 
 <script type="application/ld+json">
 {
@@ -37,17 +37,16 @@
 
   <style>
     :root {
-      /* ── Design tokens ───────────────────────────── */
-      --forest: #23301F;      /* deep spruce — header/footer/dark sections */
-      --forest-2: #2E3F29;    /* lighter spruce for hover/gradient */
-      --bark: #4A3222;        /* walnut brown — secondary dark */
-      --parchment: #F2ECDD;   /* birch/parchment — page background */
-      --parchment-2: #FBF8F0; /* lighter card surface */
-      --ember: #C97A3D;       /* ember amber — primary accent / CTAs */
+      --forest: #23301F;
+      --forest-2: #2E3F29;
+      --bark: #4A3222;
+      --parchment: #F2ECDD;
+      --parchment-2: #FBF8F0;
+      --ember: #C97A3D;
       --ember-dark: #A8622D;
-      --moss: #6C7A52;        /* muted moss — secondary accent */
-      --ink: #221E18;         /* body text */
-      --ink-soft: #55503F;    /* secondary text */
+      --moss: #6C7A52;
+      --ink: #221E18;
+      --ink-soft: #55503F;
       --line: rgba(34,30,24,0.12);
 
       --display: 'Fraunces', serif;
@@ -89,7 +88,6 @@
 
     .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
-    /* ── Log-ring motif (signature element) ───────── */
     .ring-icon {
       width: 22px; height: 22px; flex: none;
       border-radius: 50%;
@@ -117,7 +115,6 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.15);
     }
 
-    /* ── Nav ─────────────────────────────────────── */
     header.site-header {
       position: sticky;
       top: 0;
@@ -192,7 +189,6 @@
       .brand-text { font-size: 19px; }
     }
 
-    /* ── Hero ────────────────────────────────────── */
     .hero {
       position: relative;
       min-height: 84vh;
@@ -248,19 +244,16 @@
     .btn-dark { background: var(--forest); color: var(--parchment-2); }
     .btn-dark:hover { background: var(--forest-2); }
 
-    /* ── Sections ────────────────────────────────── */
     section { padding: 84px 0; }
     .section-head { max-width: 620px; margin-bottom: 44px; }
     .section-head h2 { font-size: clamp(28px, 3.6vw, 40px); margin-top: 10px; }
     .section-head p { color: var(--ink-soft); font-size: 17px; margin-top: 14px; }
 
-    /* About / trust */
     .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; }
     .about-grid p { font-size: 17px; color: var(--ink-soft); }
     .feature-list { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
     .feature-list li { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 15.5px; color: var(--forest); }
 
-    /* Pricing */
     .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
     .price-card {
       background: var(--parchment-2);
@@ -278,7 +271,6 @@
     .assurances { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 30px; }
     .assurances span { font-size: 14.5px; font-weight: 600; color: var(--forest); display: flex; align-items: center; gap: 8px; }
 
-    /* Tree services */
     .services-panel {
       background: var(--forest);
       color: var(--parchment-2);
@@ -302,7 +294,6 @@
     .rate-badge .amount { font-size: 34px; font-weight: 600; color: var(--ember); }
     .rate-badge .unit { font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #C9C2AC; margin-top: 4px; }
 
-    /* Gallery */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -322,7 +313,6 @@
     }
     .gallery-grid figure:hover img { transform: scale(1.06); }
 
-    /* Order */
     .order-section { background: var(--bark); color: var(--parchment-2); }
     .order-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start; }
     .order-grid .section-head h2, .order-grid .eyebrow { color: var(--parchment-2); }
@@ -338,7 +328,7 @@
     }
     .order-form label { font-weight: 600; font-size: 14px; display: block; margin-top: 16px; margin-bottom: 6px; color: var(--forest); }
     .order-form label:first-of-type { margin-top: 0; }
-    .order-form input, .order-form select {
+    .order-form input, .order-form select, .order-form textarea {
       width: 100%;
       padding: 12px 14px;
       font-family: var(--body);
@@ -348,7 +338,8 @@
       background: #fff;
       color: var(--ink);
     }
-    .order-form input:focus, .order-form select:focus,
+    .order-form textarea { min-height: 110px; resize: vertical; }
+    .order-form input:focus, .order-form select:focus, .order-form textarea:focus,
     .contact-form input:focus, .contact-form textarea:focus {
       outline: 3px solid rgba(201,122,61,0.35);
       border-color: var(--ember);
@@ -365,9 +356,8 @@
       font-size: 13.5px;
       color: var(--ink-soft);
     }
-    #orderStatus { margin-top: 14px; font-weight: 600; font-size: 14.5px; min-height: 20px; }
+    #orderStatus, #bookingStatus { margin-top: 14px; font-weight: 600; font-size: 14.5px; min-height: 20px; }
 
-    /* Contact */
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
     .contact-form {
       background: var(--parchment-2);
@@ -390,7 +380,6 @@
     .contact-details .item a { text-decoration: none; font-weight: 600; font-size: 17px; color: var(--forest); }
     .contact-details .item .label { display: block; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 2px; }
 
-    /* Footer */
     footer {
       background: var(--forest);
       color: #C9C2AC;
@@ -403,7 +392,6 @@
     footer .foot-links a:hover { color: var(--ember); }
     footer .foot-bottom { text-align: center; margin-top: 30px; font-size: 12.5px; color: #8B8570; }
 
-    /* Reveal-on-scroll */
     .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.in { opacity: 1; transform: none; }
 
@@ -419,7 +407,7 @@
   <header class="site-header">
     <div class="nav-inner">
       <a href="#top" class="brand">
-        <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/Improve%20Contrast%20on%20Green%20Background%20(4).png">
+        <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/Improve%20Contrast%20on%20Green%20Background%20(4).png" alt="BCB Logging logo">
         <span class="brand-text">BCB Logging<small>Timber & Firewood</small></span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
@@ -429,6 +417,7 @@
         <a href="#services">Tree Services</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
+        <a href="#booking">Book a Job</a>
         <a href="#order" class="nav-cta">Order Firewood</a>
       </nav>
     </div>
@@ -436,7 +425,6 @@
 
   <div id="top"></div>
 
-  <!-- ── Hero ─────────────────────────────────────── -->
   <section class="hero" style="padding:0;">
     <div class="ring-graphic hero-ring" aria-hidden="true"></div>
     <div class="hero-inner">
@@ -450,7 +438,6 @@
     </div>
   </section>
 
-  <!-- ── About ────────────────────────────────────── -->
   <section id="about">
     <div class="wrap about-grid">
       <div class="reveal">
@@ -468,7 +455,6 @@
 
   <div class="log-divider" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
 
-  <!-- ── Firewood pricing ─────────────────────────── -->
   <section id="firewood">
     <div class="wrap">
       <div class="section-head reveal">
@@ -498,7 +484,6 @@
     </div>
   </section>
 
-  <!-- ── Tree services ────────────────────────────── -->
   <section id="services">
     <div class="wrap">
       <div class="services-panel reveal">
@@ -515,7 +500,6 @@
     </div>
   </section>
 
-  <!-- ── Gallery ──────────────────────────────────── -->
   <section id="gallery">
     <div class="wrap">
       <div class="section-head reveal">
@@ -524,12 +508,6 @@
         <p>A look at jobs we've completed and firewood ready to go out.</p>
       </div>
       <div class="gallery-grid reveal">
-        <!--
-          🔧 REPLACE THESE: swap each src for your own photo URLs.
-          Upload photos to a GitHub repo (as you did for the logo/hero
-          image) and paste the raw.githubusercontent.com link here.
-          Add or remove <figure> blocks freely — the grid reflows.
-        -->
         <figure onclick="window.open(this.querySelector('img').src)">
           <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/IMG_1752.JPG" alt="BCB Logging work photo">
         </figure>
@@ -537,55 +515,54 @@
           <img src="https://hshc201.github.io/new-logo/Photoroom_20250618_115410.PNG" alt="BCB Logging branding">
         </figure>
         <figure onclick="window.open(this.querySelector('img').src)">
-          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/IMG_1464%20(1).JPG">
-        </figure>
-         <figure onclick="window.open(this.querySelector('img').src)">
-          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/IMG_1758%20(1).JPG">
-        </figure>
-         <figure onclick="window.open(this.querySelector('img').src)">
-          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/IMG_2236%20(1).JPG">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/IMG_1464%20(1).JPG" alt="Seasoned firewood stacked in the log store">
         </figure>
         <figure onclick="window.open(this.querySelector('img').src)">
-  <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.46.59%20(1).jpeg" alt="BCB Logging recent job photo 1">
-</figure>
-<figure onclick="window.open(this.querySelector('img').src)">
-  <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.46.59.jpeg" alt="BCB Logging recent job photo 2">
-</figure>
-<figure onclick="window.open(this.querySelector('img').src)">
-  <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.47.00%20(1).jpeg" alt="BCB Logging recent job photo 3">
-</figure>
-<figure onclick="window.open(this.querySelector('img').src)">
-  <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.47.00%20(2).jpeg" alt="BCB Logging recent job photo 4">
-</figure>
-<figure onclick="window.open(this.querySelector('img').src)">
-  <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.47.00%20(4).jpeg" alt="BCB Logging recent job photo 5">
-</figure>
-<figure onclick="window.open(this.querySelector('img').src)">
-  <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.47.00.jpeg" alt="BCB Logging recent job photo 6">
-</figure>
-<figure onclick="window.open(this.querySelector('img').src)">
-  <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.48.30.jpeg" alt="BCB Logging recent job photo 7">
-</figure>
-<figure onclick="window.open(this.querySelector('img').src)">
-  <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.52.17.jpeg" alt="BCB Logging recent job photo 8">
-</figure>
-<figure onclick="window.open(this.querySelector('img').src)">
-  <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.53.17%20(1).jpeg" alt="BCB Logging recent job photo 9">
-</figure>
-<figure onclick="window.open(this.querySelector('img').src)">
-  <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.53.17%20(2).jpeg" alt="BCB Logging recent job photo 10">
-</figure>
-<figure onclick="window.open(this.querySelector('img').src)">
-  <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.53.17%20(3).jpeg" alt="BCB Logging recent job photo 11">
-</figure>
-<figure onclick="window.open(this.querySelector('img').src)">
-  <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.53.17.jpeg" alt="BCB Logging recent job photo 12">
-</figure>
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/IMG_1758%20(1).JPG" alt="Splitting and stacking a felled log in the field">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/IMG_2236%20(1).JPG" alt="Garden tree clearance and cut-back completed">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.46.59%20(1).jpeg" alt="BCB Logging recent job photo 1">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.46.59.jpeg" alt="BCB Logging recent job photo 2">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.47.00%20(1).jpeg" alt="BCB Logging recent job photo 3">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.47.00%20(2).jpeg" alt="BCB Logging recent job photo 4">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.47.00%20(4).jpeg" alt="BCB Logging recent job photo 5">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.47.00.jpeg" alt="BCB Logging recent job photo 6">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.48.30.jpeg" alt="BCB Logging recent job photo 7">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.52.17.jpeg" alt="BCB Logging recent job photo 8">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.53.17%20(1).jpeg" alt="BCB Logging recent job photo 9">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.53.17%20(2).jpeg" alt="BCB Logging recent job photo 10">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.53.17%20(3).jpeg" alt="BCB Logging recent job photo 11">
+        </figure>
+        <figure onclick="window.open(this.querySelector('img').src)">
+          <img src="https://raw.githubusercontent.com/Hshc201/main-image/main/WhatsApp%20Image%202026-07-13%20at%2017.53.17.jpeg" alt="BCB Logging recent job photo 12">
+        </figure>
       </div>
     </div>
   </section>
 
-  <!-- ── Order Now ────────────────────────────────── -->
   <section id="order" class="order-section">
     <div class="wrap order-grid">
       <div class="reveal">
@@ -639,12 +616,49 @@
     </div>
   </section>
 
-  <!-- ── Contact ──────────────────────────────────── -->
+  <!-- ── Book a Logging Job ───────────────────────── -->
+  <section id="booking" style="background: var(--forest); color: var(--parchment-2);">
+    <div class="wrap order-grid">
+      <div class="reveal">
+        <span class="eyebrow" style="color: var(--ember);">Book a job</span>
+        <h2 style="color: #fff;">Get tree work booked in.</h2>
+        <p style="color: #DCD5C0;">Tell us about the job — what needs doing, roughly how big — and pick a date from our current availability. We'll confirm the details and a price by phone.</p>
+        <div class="order-note">Availability shown here is separate from firewood delivery dates — these are the days we currently have free for felling, clearance and tree work.</div>
+      </div>
+
+      <form class="order-form reveal" id="bookingForm">
+        <label for="jobName">Name</label>
+        <input type="text" id="jobName" required>
+
+        <label for="jobAddress">Site address</label>
+        <input type="text" id="jobAddress" required>
+
+        <div class="form-row">
+          <div>
+            <label for="jobPhone">Phone number</label>
+            <input type="tel" id="jobPhone" required>
+          </div>
+          <div>
+            <label for="jobEmail">Email</label>
+            <input type="email" id="jobEmail" required>
+          </div>
+        </div>
+
+        <label for="jobDescription">Describe the job</label>
+        <textarea id="jobDescription" required placeholder="e.g. one large oak needs felling near the fence line, plus clearance of fallen branches"></textarea>
+
+        <label for="jobDate">Preferred date</label>
+        <select id="jobDate" required></select>
+
+        <button type="submit" class="btn btn-primary">Request booking</button>
+        <p id="bookingStatus"></p>
+      </form>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="wrap contact-grid">
-      <form class="contact-form reveal" action="https://formspree.io/f/xrenzvbz"
-  method="POST">
-        
+      <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xrenzvbz" method="POST">
         <span class="eyebrow">Get in touch</span>
         <h2 style="margin-top:8px;">Send us a message.</h2>
         <label for="contactEmail">Your email</label>
@@ -652,6 +666,7 @@
         <label for="contactMessage">Your message</label>
         <textarea id="contactMessage" name="message" required></textarea>
         <button type="submit" class="btn btn-dark">Send message</button>
+        <p id="contactStatus" style="margin-top:14px; font-weight:600; font-size:14.5px; min-height:20px;"></p>
       </form>
 
       <div class="contact-details reveal">
@@ -680,6 +695,7 @@
         <a href="#services">Tree Services</a>
         <a href="#gallery">Gallery</a>
         <a href="#order">Order</a>
+        <a href="#booking">Book a Job</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -689,7 +705,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile nav toggle
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
     navToggle.addEventListener('click', () => {
@@ -701,7 +716,6 @@
       navToggle.setAttribute('aria-expanded', false);
     }));
 
-    // Scroll reveal
     const revealEls = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
       const io = new IntersectionObserver((entries) => {
@@ -717,39 +731,37 @@
       revealEls.forEach(el => el.classList.add('in'));
     }
 
-    // ✅ ---------- ORDER FORM LOGIC ----------
+    // ✅ ---------- ORDER FORM LOGIC (firewood, with 5-per-day cap) ----------
 
-    // 🔧 REPLACE: list the dates you currently have free for delivery.
-    // Format: 'YYYY-MM-DD'. Dates automatically drop off the list once
-    // they've passed, so just keep adding new ones as your diary fills up.
     const availableDates = [
-       '2026-09-06',
-  '2026-10-04',
-  '2026-11-08',
-  '2026-12-06',
-  '2027-01-31',
-  '2027-02-07',
-  '2027-03-07'
+      '2026-09-06',
+      '2026-10-04',
+      '2026-11-08',
+      '2026-12-06',
+      '2027-01-31',
+      '2027-02-07',
+      '2027-03-07'
     ];
-  const MAX_DELIVERIES_PER_DAY = 5;
- 
+
+    const MAX_DELIVERIES_PER_DAY = 5;
+
     const ORDER_SHEET_ENDPOINT = 'https://sheetdb.io/api/v1/uk1qgq5w9423u';
- 
+
     function formatDateLabel(dateStr) {
       const d = new Date(dateStr + 'T00:00:00');
       return d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
     }
- 
+
     function normalizeDate(value) {
       if (value === null || value === undefined || value === '') return null;
       const str = String(value).trim();
- 
+
       let m = str.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
       if (m) return `${m[1]}-${m[2].padStart(2,'0')}-${m[3].padStart(2,'0')}`;
- 
+
       m = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
       if (m) return `${m[3]}-${m[2].padStart(2,'0')}-${m[1].padStart(2,'0')}`;
- 
+
       if (/^\d{4,6}(\.\d+)?$/.test(str)) {
         const serial = parseFloat(str);
         const epoch = new Date(Date.UTC(1899, 11, 30));
@@ -758,19 +770,19 @@
           return `${d.getUTCFullYear()}-${String(d.getUTCMonth()+1).padStart(2,'0')}-${String(d.getUTCDate()).padStart(2,'0')}`;
         }
       }
- 
+
       const d = new Date(str);
       if (!isNaN(d)) {
         return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
       }
       return null;
     }
- 
+
     function getDeliveryDateField(row) {
       const key = Object.keys(row).find(k => k.replace(/\s+/g, '').toLowerCase() === 'deliverydate');
       return key ? row[key] : null;
     }
- 
+
     async function getDateCounts() {
       const counts = {};
       try {
@@ -788,20 +800,20 @@
       console.log('Delivery date counts:', counts);
       return counts;
     }
- 
+
     async function populateDates() {
       const select = document.getElementById('deliveryDate');
       select.innerHTML = '<option disabled selected>Loading available dates...</option>';
- 
+
       const today = new Date();
       today.setHours(0,0,0,0);
       const futureDates = availableDates.filter(d => new Date(d + 'T00:00:00') >= today);
       const counts = await getDateCounts();
- 
+
       const openDates = futureDates.filter(d => (counts[d] || 0) < MAX_DELIVERIES_PER_DAY);
- 
+
       select.innerHTML = '';
- 
+
       if (openDates.length === 0) {
         const opt = document.createElement('option');
         opt.textContent = 'No dates currently available — please call us';
@@ -819,15 +831,15 @@
       });
     }
     populateDates();
- 
+
     document.getElementById('orderForm').addEventListener('submit', async function (e) {
       e.preventDefault();
       const statusEl = document.getElementById('orderStatus');
       const chosenDate = document.getElementById('deliveryDate').value;
- 
+
       statusEl.style.color = 'var(--parchment-2)';
       statusEl.textContent = 'Checking availability...';
- 
+
       const counts = await getDateCounts();
       if ((counts[chosenDate] || 0) >= MAX_DELIVERIES_PER_DAY) {
         statusEl.style.color = '#EFC0B0';
@@ -835,7 +847,7 @@
         await populateDates();
         return;
       }
- 
+
       const order = {
         Timestamp: new Date().toISOString(),
         Name: document.getElementById('custName').value,
@@ -846,9 +858,9 @@
         Quantity: document.getElementById('quantity').value,
         DeliveryDate: chosenDate
       };
- 
+
       statusEl.textContent = 'Sending order...';
- 
+
       try {
         const response = await fetch(ORDER_SHEET_ENDPOINT, {
           method: 'POST',
@@ -856,7 +868,7 @@
           body: JSON.stringify({ data: [order] })
         });
         if (!response.ok) throw new Error('Request failed');
- 
+
         statusEl.style.color = '#B7D9A8';
         statusEl.textContent = 'Order placed! We will confirm your delivery shortly.';
         document.getElementById('orderForm').reset();
@@ -866,7 +878,93 @@
         statusEl.textContent = 'Something went wrong sending your order — please call or WhatsApp us instead.';
       }
     });
- 
+
+    // ✅ ---------- LOGGING JOB BOOKING (separate sheet tabs) ----------
+
+    const LOGGING_AVAILABILITY_ENDPOINT = `${ORDER_SHEET_ENDPOINT}?sheet=LoggingAvailability`;
+    const LOGGING_JOBS_ENDPOINT = `${ORDER_SHEET_ENDPOINT}?sheet=LoggingJobs`;
+
+    function getFieldByName(row, name) {
+      const key = Object.keys(row).find(k => k.replace(/\s+/g, '').toLowerCase() === name.toLowerCase());
+      return key ? row[key] : null;
+    }
+
+    async function populateBookingDates() {
+      const select = document.getElementById('jobDate');
+      if (!select) return;
+      select.innerHTML = '<option disabled selected>Loading available dates...</option>';
+
+      try {
+        const res = await fetch(LOGGING_AVAILABILITY_ENDPOINT);
+        if (!res.ok) throw new Error('Could not load logging availability');
+        const rows = await res.json();
+
+        const today = new Date();
+        today.setHours(0,0,0,0);
+
+        const dates = [...new Set(
+          rows.map(r => normalizeDate(getFieldByName(r, 'date'))).filter(Boolean)
+        )].filter(d => new Date(d + 'T00:00:00') >= today).sort();
+
+        select.innerHTML = '';
+
+        if (dates.length === 0) {
+          const opt = document.createElement('option');
+          opt.textContent = 'No dates currently available — please call us';
+          opt.disabled = true;
+          select.appendChild(opt);
+          return;
+        }
+        dates.forEach(dateStr => {
+          const opt = document.createElement('option');
+          opt.value = dateStr;
+          opt.textContent = formatDateLabel(dateStr);
+          select.appendChild(opt);
+        });
+      } catch (err) {
+        console.error('Could not load logging availability:', err);
+        select.innerHTML = '<option disabled selected>Could not load dates — please call us</option>';
+      }
+    }
+    populateBookingDates();
+
+    const bookingForm = document.getElementById('bookingForm');
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const statusEl = document.getElementById('bookingStatus');
+        statusEl.style.color = 'var(--parchment-2)';
+        statusEl.textContent = 'Sending request...';
+
+        const job = {
+          Timestamp: new Date().toISOString(),
+          Name: document.getElementById('jobName').value,
+          Address: document.getElementById('jobAddress').value,
+          Phone: document.getElementById('jobPhone').value,
+          Email: document.getElementById('jobEmail').value,
+          JobDescription: document.getElementById('jobDescription').value,
+          PreferredDate: document.getElementById('jobDate').value
+        };
+
+        try {
+          const response = await fetch(LOGGING_JOBS_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ data: [job] })
+          });
+          if (!response.ok) throw new Error('Request failed');
+
+          statusEl.style.color = '#B7D9A8';
+          statusEl.textContent = 'Request sent! We will confirm the details and price shortly.';
+          bookingForm.reset();
+          populateBookingDates();
+        } catch (err) {
+          statusEl.style.color = '#EFC0B0';
+          statusEl.textContent = 'Something went wrong — please call or WhatsApp us instead.';
+        }
+      });
+    }
+
     // ✅ ---------- CONTACT FORM (stays on page instead of redirecting) ----------
     document.getElementById('contactForm').addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -874,14 +972,14 @@
       const statusEl = document.getElementById('contactStatus');
       statusEl.style.color = 'var(--forest)';
       statusEl.textContent = 'Sending...';
- 
+
       try {
         const response = await fetch(form.action, {
           method: 'POST',
           headers: { 'Accept': 'application/json' },
           body: new FormData(form)
         });
- 
+
         if (response.ok) {
           statusEl.style.color = '#3E7A3E';
           statusEl.textContent = 'Message sent — we\'ll get back to you shortly.';
