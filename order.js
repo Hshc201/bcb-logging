@@ -1,7 +1,8 @@
 const MAX_DELIVERIES_PER_DAY = 5;
 
-const ORDER_SHEET_ENDPOINT = 'https://sheetdb.io/api/v1/uk1qgq5w9423u';
-const FIREWOOD_AVAILABILITY_ENDPOINT = `${ORDER_SHEET_ENDPOINT}?sheet=FirewoodAvailability`;
+const SHEETDB_BASE = 'https://sheetdb.io/api/v1/uk1qgq5w9423u';
+const FIREWOOD_ORDERS_ENDPOINT = `${SHEETDB_BASE}?sheet=FirewoodDelivery`;
+const FIREWOOD_AVAILABILITY_ENDPOINT = `${SHEETDB_BASE}?sheet=FirewoodAvailability`;
 
 function formatDateLabel(dateStr) {
   const d = new Date(dateStr + 'T00:00:00');
@@ -63,7 +64,7 @@ async function getAvailableDates() {
 async function getDateCounts() {
   const counts = {};
   try {
-    const res = await fetch(ORDER_SHEET_ENDPOINT);
+    const res = await fetch(FIREWOOD_ORDERS_ENDPOINT);
     if (!res.ok) throw new Error('Could not load existing orders');
     const rows = await res.json();
     rows.forEach(row => {
@@ -74,6 +75,7 @@ async function getDateCounts() {
   } catch (err) {
     console.error('Could not fetch existing order counts:', err);
   }
+  console.log('Delivery date counts:', counts);
   return counts;
 }
 
@@ -139,7 +141,7 @@ document.getElementById('orderForm').addEventListener('submit', async function (
   statusEl.textContent = 'Sending order...';
 
   try {
-    const response = await fetch(ORDER_SHEET_ENDPOINT, {
+    const response = await fetch(FIREWOOD_ORDERS_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ data: [order] })
